@@ -3,6 +3,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {IUsuario} from '../usuario/iusuario';
 import {UsuarioService} from '../usuario/usuario.service';
 import {NotificationService} from '../shared/notification/notification.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-registro',
@@ -12,7 +13,11 @@ import {NotificationService} from '../shared/notification/notification.service';
 export class RegistroComponent implements OnInit {
   frmRegistro: FormGroup;
   usuario = new IUsuario();
-  constructor(private fb: FormBuilder, private usuarioService: UsuarioService, private notifService: NotificationService) {
+
+  constructor(private fb: FormBuilder,
+              private usuarioService: UsuarioService,
+              private notifService: NotificationService,
+              private route: Router) {
     this.frmRegistro = this.fb.group({
         nombre : ['', Validators.required],
         email : ['', Validators.email],
@@ -39,6 +44,7 @@ export class RegistroComponent implements OnInit {
 
       if (this.usuarioService.addUsuario(this.usuario).subscribe()) {
         this.notifService.Show('info', 'Usuario Creado');
+        this.route.navigate(['usuarios']);
       }
   }
 

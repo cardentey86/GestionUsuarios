@@ -2,6 +2,7 @@ import {Component, Input, OnInit, OnChanges} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {IUsuario} from '../iusuario';
 import {UsuarioService} from '../usuario.service';
+import {Route} from '@angular/router';
 
 @Component({
   selector: 'app-usuario-edit',
@@ -11,6 +12,7 @@ import {UsuarioService} from '../usuario.service';
 export class UsuarioEditComponent implements OnInit, OnChanges {
   @Input() usuarioEdit: IUsuario;
   frmUpdate: FormGroup;
+  private route: Route;
   constructor(private fb: FormBuilder, private usuarioService: UsuarioService) {
     this.frmUpdate = this.fb.group({
         nombre : ['', Validators.required],
@@ -44,6 +46,7 @@ export class UsuarioEditComponent implements OnInit, OnChanges {
     }
 
     this.usuarioService.deleteUsuario(this.usuarioEdit.id).subscribe();
+    this.route.redirectTo('home');
   }
 
 }

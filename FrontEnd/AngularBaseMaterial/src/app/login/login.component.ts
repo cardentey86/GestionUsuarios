@@ -15,18 +15,18 @@ import {HomeComponent} from '../home/home.component';
 export class LoginComponent implements OnInit {
 
   frmLogin: FormGroup;
-  constructor(private notifService: NotificationService, private fb:FormBuilder, private varService : VariableService) {
+  constructor(private notifService: NotificationService, private fb: FormBuilder, private varService: VariableService) {
     this.frmLogin = this.fb.group({
-        email:['', Validators.email],
-        clave:['', Validators.required],
-    })
+        email: ['', Validators.email],
+        clave: ['', Validators.required],
+    });
   }
 
   ngOnInit() {
 
   }
 
-  Login(){
+  Login() {
     const r = this.frmLogin.value;
     this.varService.bLoggIn.next(true);
   }

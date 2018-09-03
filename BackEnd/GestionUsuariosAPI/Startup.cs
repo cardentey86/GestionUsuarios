@@ -29,6 +29,7 @@ namespace GestionUsuariosAPI
 
             services.AddDbContext<DBContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("DBContext")));
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAllOrigins",

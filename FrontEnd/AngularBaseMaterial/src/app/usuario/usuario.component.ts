@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UsuarioService} from './usuario.service';
-import {Usuario} from './iusuario';
+import {IUsuario} from './iusuario';
 import {MatTableDataSource} from '@angular/material';
 
 @Component({
@@ -9,22 +9,22 @@ import {MatTableDataSource} from '@angular/material';
   styleUrls: ['./usuario.component.css']
 })
 export class UsuarioComponent implements OnInit {
-  public dataSource : MatTableDataSource<Usuario>;
-   public usuarios : Usuario[];
+  public dataSource: MatTableDataSource<IUsuario>;
+   public usuarios: IUsuario[];
    public valueSearch: string = '';
-  constructor(private usuarioService : UsuarioService) {
+  constructor(private usuarioService: UsuarioService) {
   }
 
     public displayedColumns = ['Id', 'Nombre', 'Email', 'Clave'];
 
   ngOnInit() {
-    this.usuarioService.getUsuarios().subscribe(u =>{
+    this.usuarioService.getUsuarios().subscribe(u => {
       this.usuarios = u;
-      this.dataSource = new MatTableDataSource<Usuario>(u);
+      this.dataSource = new MatTableDataSource<IUsuario>(u);
     });
   }
 
-  Buscar(value: string){
+  Buscar(value: string) {
 
   }
 

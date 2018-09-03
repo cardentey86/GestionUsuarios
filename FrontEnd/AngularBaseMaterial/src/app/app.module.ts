@@ -17,6 +17,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
 import {VariableService} from './shared/visibilidad/variable.service';
 import {UsuarioService} from './usuario/usuario.service';
+import { UsuarioEditComponent } from './usuario/usuario-edit/usuario-edit.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {UsuarioService} from './usuario/usuario.service';
     HomeComponent,
     RegistroComponent,
     UsuarioComponent,
-    NotificationComponent
+    NotificationComponent,
+    UsuarioEditComponent
   ],
   imports: [
     BrowserModule,

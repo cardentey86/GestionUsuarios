@@ -20,4 +20,9 @@ export class UsuarioService {
   addUsuario(usuario: IUsuario) {
     return this.http.post<IUsuario>(`${environment.api.url}api/usuarios`, JSON.stringify(usuario), {headers: this.header});
   }
+
+  deleteUsuario(id: number) {
+    return this.http.delete(`${environment.api.url}api/usuarios/${id}`,
+        {headers: this.header});
+  }
 }

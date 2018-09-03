@@ -1,6 +1,7 @@
 import {Component, Input, OnInit, OnChanges} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {IUsuario} from '../iusuario';
+import {UsuarioService} from '../usuario.service';
 
 @Component({
   selector: 'app-usuario-edit',
@@ -10,7 +11,7 @@ import {IUsuario} from '../iusuario';
 export class UsuarioEditComponent implements OnInit, OnChanges {
   @Input() usuarioEdit: IUsuario;
   frmUpdate: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private usuarioService: UsuarioService) {
     this.frmUpdate = this.fb.group({
         nombre : ['', Validators.required],
         email : ['', Validators.email],
@@ -35,6 +36,14 @@ export class UsuarioEditComponent implements OnInit, OnChanges {
 
   Update() {
 
+  }
+
+  Delete() {
+    if (this.usuarioEdit === undefined) {
+        return;
+    }
+
+    this.usuarioService.deleteUsuario(this.usuarioEdit.id).subscribe();
   }
 
 }

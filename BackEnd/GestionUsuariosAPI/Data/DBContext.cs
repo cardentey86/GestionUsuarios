@@ -15,5 +15,7 @@ namespace GestionUsuariosAPI.Models
         }
 
         public DbSet<GestionUsuariosAPI.Model.Usuario> Usuario { get; set; }
+
+        public DbSet<GestionUsuariosAPI.Model.VerificaUsuario> VerificaUsuario { get; set; }
     }
 }

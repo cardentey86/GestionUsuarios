@@ -18,6 +18,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {VariableService} from './shared/visibilidad/variable.service';
 import {UsuarioService} from './usuario/usuario.service';
 import { UsuarioEditComponent } from './usuario/usuario-edit/usuario-edit.component';
+import {VerificaUsuarioService} from './usuario/verifica-usuario.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { UsuarioEditComponent } from './usuario/usuario-edit/usuario-edit.compon
       HttpClientModule,
       ReactiveFormsModule
   ],
-  providers: [NotificationService, VariableService, UsuarioService],
+  providers: [NotificationService, VariableService, UsuarioService, VerificaUsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -44,7 +44,7 @@ export class RegistroComponent implements OnInit {
 
       if (this.usuarioService.addUsuario(this.usuario).subscribe()) {
         this.notifService.Show('info', 'Usuario Creado');
-        this.route.navigate(['usuarios']);
+        this.route.navigate(['login']);
       }
   }
 

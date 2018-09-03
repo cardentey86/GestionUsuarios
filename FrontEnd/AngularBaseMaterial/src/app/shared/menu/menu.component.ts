@@ -10,15 +10,13 @@ import {VariableService} from '../visibilidad/variable.service';
 })
 export class MenuComponent implements OnInit {
   loggedIn: boolean = false;
-  constructor(private varService : VariableService) { }
+  constructor(private varService: VariableService) { }
 
   ngOnInit() {
-    this.varService.bLoggIn.subscribe(
-        v=>{this.loggedIn = v}
-    )
+    this.varService.bLoggIn.subscribe(v => {this.loggedIn = v});
   }
 
-  Logout(){
+  Logout() {
     this.varService.bLoggIn.next(false);
   }
 

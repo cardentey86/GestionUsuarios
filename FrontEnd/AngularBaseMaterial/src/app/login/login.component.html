@@ -1,0 +1,13 @@
+<div>
+  <form [formGroup]="frmLogin">
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email">
+    </div>
+    <div>
+      <label for="clave">Clave</label>
+      <input type="password" id="clave" formControlName="clave">
+    </div>
+    <button (click)="Login()" [disabled]="!frmLogin.valid">Login</button>
+  </form>
+</div>

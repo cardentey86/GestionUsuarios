@@ -1,0 +1,11 @@
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\bin\Debug\netcoreapp2.0\GestionUsuariosAPI.deps.json
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\bin\Debug\netcoreapp2.0\GestionUsuariosAPI.runtimeconfig.json
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\bin\Debug\netcoreapp2.0\GestionUsuariosAPI.runtimeconfig.dev.json
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\bin\Debug\netcoreapp2.0\GestionUsuariosAPI.dll
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\obj\Debug\netcoreapp2.0\GestionUsuariosAPI.csprojResolveAssemblyReference.cache
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\obj\Debug\netcoreapp2.0\GestionUsuariosAPI.csproj.CoreCompileInputs.cache
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\obj\Debug\netcoreapp2.0\GestionUsuariosAPI.AssemblyInfoInputs.cache
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\obj\Debug\netcoreapp2.0\GestionUsuariosAPI.AssemblyInfo.cs
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\bin\Debug\netcoreapp2.0\GestionUsuariosAPI.pdb
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\obj\Debug\netcoreapp2.0\GestionUsuariosAPI.dll
+I:\Angular\GestionUsuarios\BackEnd\GestionUsuariosAPI\obj\Debug\netcoreapp2.0\GestionUsuariosAPI.pdb

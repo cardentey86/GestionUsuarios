@@ -1,0 +1,13 @@
+div.menu{
+    margin-left: 20px;
+}
+
+div.menu div a{
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}
+
+div.menu div a:hover{
+    text-decoration: underline;
+}

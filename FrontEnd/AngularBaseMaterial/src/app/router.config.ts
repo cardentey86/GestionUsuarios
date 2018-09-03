@@ -8,7 +8,7 @@ import {UsuarioEditComponent} from './usuario/usuario-edit/usuario-edit.componen
 export const RouterConfig: Route[] = [
     { path: 'home', component: HomeComponent },
     { path: 'usuarios', component: UsuarioComponent },
-    { path: 'usuarioEdit', component: UsuarioEditComponent },
+    { path: 'usuarios/usuarioEdit', component: UsuarioEditComponent },
     { path: 'registro', component: RegistroComponent },
     { path: 'login', component: LoginComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' },

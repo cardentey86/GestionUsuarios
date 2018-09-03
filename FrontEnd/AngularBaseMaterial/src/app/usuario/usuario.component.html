@@ -56,6 +56,7 @@
     </ng-container>
     <ng-container matColumnDef="Acción">
         <th mat-header-cell *matHeaderCellDef> Acción </th>
+        <!--<td mat-cell *matCellDef="let user"> <a routerLink="usuarioEdit" style="cursor: pointer" ><mat-icon>edit</mat-icon></a> </td>-->
         <td mat-cell *matCellDef="let user"> <a style="cursor: pointer" (click)="Seleccionar(user)"><mat-icon>edit</mat-icon></a> </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

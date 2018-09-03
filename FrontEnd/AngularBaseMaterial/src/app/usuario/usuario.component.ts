@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UsuarioService} from './usuario.service';
 import {IUsuario} from './iusuario';
 import {MatTableDataSource} from '@angular/material';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-usuario',
@@ -13,7 +14,8 @@ export class UsuarioComponent implements OnInit {
    public usuarios: IUsuario[];
    public usuarioEdit: IUsuario;
    public valueSearch: string = '';
-  constructor(private usuarioService: UsuarioService) {
+  constructor(private usuarioService: UsuarioService,
+              private router: Router) {
   }
 
     public displayedColumns = ['Id', 'Nombre', 'Email', 'Clave', 'Acción'];
@@ -31,15 +33,13 @@ export class UsuarioComponent implements OnInit {
 
   Seleccionar(usuario) {
       this.usuarioEdit = usuario;
+
   }
 
   applyFilter(filterValue: string) {
       filterValue = filterValue.trim(); // Remove whitespace
       filterValue = filterValue.toLowerCase(); // MatTableDataSource defaults to lowercase matches
        this.dataSource.filter = filterValue;
-      // this.usuarios.filter(value => {
-      //   filterValue = value.nombre;
-      // });
   }
 }
 

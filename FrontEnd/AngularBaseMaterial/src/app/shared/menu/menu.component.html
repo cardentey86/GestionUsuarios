@@ -5,7 +5,7 @@
 
       <div class="menu" fxLayout="row" fxLayout.xs="column" fxLayoutGap="20px">
         <div><a routerLink="home">Home</a></div>
-        <div *ngIf="loggedIn"><a routerLink="usuarios">Usuarios</a></div>
+        <div *ngIf="!loggedIn"><a routerLink="usuarios">Usuarios</a></div>
         <div *ngIf="!loggedIn"><a routerLink="registro">Registro</a></div>
         <div *ngIf="!loggedIn"><a routerLink="login">Login</a></div>
         <div *ngIf="loggedIn" (click)="Logout()"><a routerLink="logout">Logout</a></div>

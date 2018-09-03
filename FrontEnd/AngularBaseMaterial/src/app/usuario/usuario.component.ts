@@ -11,11 +11,12 @@ import {MatTableDataSource} from '@angular/material';
 export class UsuarioComponent implements OnInit {
   public dataSource: MatTableDataSource<IUsuario>;
    public usuarios: IUsuario[];
+   public usuarioEdit: IUsuario;
    public valueSearch: string = '';
   constructor(private usuarioService: UsuarioService) {
   }
 
-    public displayedColumns = ['Id', 'Nombre', 'Email', 'Clave'];
+    public displayedColumns = ['Id', 'Nombre', 'Email', 'Clave', 'Acción'];
 
   ngOnInit() {
     this.usuarioService.getUsuarios().subscribe(u => {
@@ -26,6 +27,10 @@ export class UsuarioComponent implements OnInit {
 
   Buscar(value: string) {
 
+  }
+
+  Seleccionar(usuario) {
+      this.usuarioEdit = usuario;
   }
 
   applyFilter(filterValue: string) {

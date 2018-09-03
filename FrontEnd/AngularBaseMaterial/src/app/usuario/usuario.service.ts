@@ -14,7 +14,7 @@ export class UsuarioService {
   }
 
   getUsuarios(): Observable <IUsuario[]> {
-    return this.http.get<Usuario[]>(`${environment.api.url}api/usuarios`);
+    return this.http.get<IUsuario[]>(`${environment.api.url}api/usuarios`);
   }
 
   addUsuario(usuario: IUsuario) {

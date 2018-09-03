@@ -1,3 +1,15 @@
-<p>
-  usuario-edit works!
-</p>
+<form [formGroup]="frmUpdate">
+    <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" formControlName="nombre">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" formControlName="email">
+    </div>
+    <div>
+        <label for="clave">Clave</label>
+        <input type="text" id="clave" formControlName="clave">
+    </div>
+    <button (click)="Update()">Actualizar</button>
+</form>
